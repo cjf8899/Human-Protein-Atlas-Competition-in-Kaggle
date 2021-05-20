@@ -20,3 +20,24 @@ link : [https://www.kaggle.com/c/hpa-single-cell-image-classification](https://w
   
 # Approach
 <img src="https://user-images.githubusercontent.com/53032349/118927937-7c285280-b97d-11eb-81d1-14af4d86f20c.JPG" width="80%" height="80%" title="70px" alt="memoryblock"><br>
+저의 접근방식은 다음과 같습니다. <br>
+
+1. Multi-label classification<br>
+2. Cam<br>
+3. Segment by cell<br>
+4. Pseudo labeling<br>
+5. Single-label classification<br>
+
+
+## Multi-label classification
+image-level label 에서 cell-level label 까지 도출해야 하기 때문에 우선적으로 기본 성능을 알아보고, 또한 어떠한 아이디어가 나오든 무조건 필요하다 생각하여 Multi-label classification을 진행하였습니다. 모델은 Resnet101, Efficientnet b3, b4, b5, b6, b7 로 진행하였었고 여러 가지 기법들도 적용하여 최종적으로 Resnet101 : 70.7%, Efficientnet b7 : 70.65%를 달성하였습니다. (해당 점수는 train set의 10%를 val set으로 사용하여 나타내었습니다.) <br>
+
+## Cam
+Weakly supervised learning에서 자주 사용하고, 본 대회측의 말에 의하면 한 이미지에 대한 multi-label이 존재하지만 이미지 안에 있는 여러 가지 cell에는 해당 라벨이 없을 수도 있다고 하였습니다. (예시: image-label은 0,5,8이고 이미지 안에 a, b라는 cell이 존재할 때, cell-label이 각 각 a는 0,5,8, b는 8 일 수도 있다.)
+따라서 각 라벨마다 Cam을 사용하여 무엇을 보고 판단하였는지 알아내였습니다.<br>
+
+## Segment by cell
+이미지에 여러 가지 cell이 존재하기 때문에 이를 각각의 cell로 나눌 필요성을 느꼈고, 대회측에서도 무조건적으로 사용해야 하는 것이기 때문에 기본 cell segmentation tool을 제공해 주었습니다. 이 후에 submission에서 run time over가 나타났었고 이를 segmentation 하는 부분에서 시간을 많이 소모한다는 것을 발견했습니다. 저와 같은 이유로 제출이 안된다 하시는 분들을 검색해보았고 어떤 참가자의 fest cell segmentation tool 제공해주어 해결하였습니다.<br>
+
+## Pseudo labeling
+이미지당 cell의 개수가 적게는 5개미만, 많게는 100개 이상이였습니다. 우리는 앞서 진행한 cam과 cell segmentation을 가지고 pseudo labeling을 진행하였습니다. cam에서 나온 heatmap을 가지고 일정 수치 이상인 값들로 labeling, 그 외의 값을 가지는 cell은 새로운 class를 만들어 따로 저장하였습니다. 총 cell의 개수는 490,000개 정도였고 이중 labeling이 진행된 cell은 60,000개 정도였습니다. 총 cell의 개수에 비해 사용하는 cell이 너무 적다고 판단하여 나중에는 위에 있는 사이클을 한번 더 적용하여 80,000개 정도 까지 늘렸습니다. <br>
