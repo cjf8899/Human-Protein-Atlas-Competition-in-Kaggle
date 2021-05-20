@@ -43,7 +43,7 @@ Weakly supervised learning에서 자주 사용하고, 본 대회측의 말에 �
 <img src="https://user-images.githubusercontent.com/53032349/118949736-80139f00-b994-11eb-8667-0737477fbea9.JPG" width="80%" height="80%" title="70px" alt="memoryblock"><br>
   
 ## Single-label classification
-위에서 설명한 접근방식을 토대로 하여 최종적으로 cell-lavel pseudo label이 있는 데이터 셋을 완성하였고, 이를 Single-label classification 하였습니다. pre-train으로는 imagenet을 사용하려 했지만 테스크가 너무 다른 테스크였기 때문에 앞서 진행한 multi-label classification에서의 **70.** * **%**모델들을 사용하였습니다. 처음 사이클 한번 돌았을 때 성능은 **30 ~ 35%** 이였고, 위 사이클을 한 번 더 돌았을 때 최종적으로 **41.14%** 달성하였고 대회를 마쳤습니다.<br>
+위에서 설명한 접근방식을 토대로 하여 최종적으로 cell-lavel pseudo label이 있는 데이터 셋을 완성하였고, 이를 Single-label classification 하였습니다. pre-train으로는 imagenet을 사용하려 했지만 테스크가 너무 다른 테스크였기 때문에 앞서 진행한 multi-label classification에서의 70.*%모델들을 사용하였습니다. 처음 사이클 한번 돌았을 때 성능은 **30 ~ 35%** 이였고, 위 사이클을 한 번 더 돌았을 때 최종적으로 **41.14%** 달성하였고 대회를 마쳤습니다.<br>
 
 # Review
 Kaggle이라는 곳에서 첫 번째로 진행하였던 대회였습니다. 처음이다보니 대회의 진행 순서, 방법, submission 하는 방법 등등 많은 고난과 역경이 있었습니다.(특히 submission...)<br>
