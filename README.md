@@ -15,5 +15,8 @@ link : [https://www.kaggle.com/c/hpa-single-cell-image-classification](https://w
 <img src="https://user-images.githubusercontent.com/53032349/118927700-2653aa80-b97d-11eb-855a-6c758d00de4d.png" width="80%" height="80%" title="70px" alt="memoryblock"><br>
   
 라벨은 총 19개로 구성되어 있으며, 의미는 다음과 같습니다.<br>
+<img src="https://user-images.githubusercontent.com/53032349/118927833-5602b280-b97d-11eb-9973-b73b17dd885e.JPG" width="80%" height="80%" title="70px" alt="memoryblock"><br>
   
   
+# Approach
+<img src="https://user-images.githubusercontent.com/53032349/118927937-7c285280-b97d-11eb-81d1-14af4d86f20c.JPG" width="80%" height="80%" title="70px" alt="memoryblock"><br>
