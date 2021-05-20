@@ -3,9 +3,8 @@
 link : [https://www.kaggle.com/c/hpa-single-cell-image-classification](https://www.kaggle.com/c/hpa-single-cell-image-classification)<br>
 
 안녕하세요. AiRLab(한밭대학교 인공지능 및 로보틱스 연구실) 노현철입니다.<br>
-
-# Overview
 저는 2021.02.01. ~ 2021.05.05. 까지 Kaggle에서 주최한 <Human Protein Atlas - Single Cell Classification> Competition에 참가하였습니다. <br>
+# Overview
 
 이 Competition의 Overview는 단백질의 위치에 따라 작업하는 역할이 달라져 세포의 이질성이 유발된다고 합니다. 또한, 단백질은 모든 세포 과정에서 필수적인 역할을 하며, 다른 종류의 단백질들이 특정 위치에 모여 작업을 수행한다면 이 결과는 존재하는 단백질의 종류에 따라 다릅니다. 이러한 단백질들은 세포사이의 큰 이질성을 일으킬 수 있기 때문에 해당 세포의 단백질의 위치 정보와 종류를 알아낸다면 세포가 어떤 기능을 수행하는지, 질병이 어떻게 발생하는지, 더 나은 치료법을 개발하는 방법을 이해하는데 중요하게 생각하여 열린 Competition입니다.<br>
   
