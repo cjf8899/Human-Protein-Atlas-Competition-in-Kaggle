@@ -22,7 +22,7 @@ link : [https://www.kaggle.com/c/hpa-single-cell-image-classification](https://w
 <img src="https://user-images.githubusercontent.com/53032349/118927937-7c285280-b97d-11eb-81d1-14af4d86f20c.JPG" width="80%" height="80%" title="70px" alt="memoryblock"><br>
 저의 접근방식은 다음과 같습니다. <br>
 
-1. Multi-label classification<br>
+*1. Multi-label classification*<br>
 2. Cam<br>
 3. Segment by cell<br>
 4. Pseudo labeling<br>
