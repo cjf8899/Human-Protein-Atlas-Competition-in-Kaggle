@@ -30,7 +30,7 @@ link : [https://www.kaggle.com/c/hpa-single-cell-image-classification](https://w
 
 ## Multi-label classification
 <p align="left"><img src="https://user-images.githubusercontent.com/53032349/118968055-6d09ca80-b9a6-11eb-839e-7b9640b2dc58.jpg" width="22%" height="22%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118968123-80b53100-b9a6-11eb-8caf-6802e681718a.jpg" width="22%" height="22%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118968239-a0e4f000-b9a6-11eb-9526-cd3058d08af1.jpg" width="22%" height="22%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118968761-426c4180-b9a7-11eb-8ca7-24b591875e21.jpg" width="22%" height="22%" title="70px" alt="memoryblock"></p>
-<p align="center">image 1　　　　　　　　　　image 2　　　　　　　　　　image 3　　　　　　　　　　image 4　　　　　　　　　　</p>
+<p align="center">　　　　　**image 1**　　　　　　　　　　**image 2**　　　　　　　　　　**image 3**　　　　　　　　　　**image 4**　　　　　　　　　　</p>
 image-level label 에서 cell-level label 까지 도출해야 하기 때문에 우선적으로 기본 성능을 알아보고, 또한 어떠한 아이디어가 나오든 무조건 필요하다 생각하여 Multi-label classification을 진행하였습니다. 모델은 Resnet101, Efficientnet b3, b4, b5, b6, b7 로 진행하였었고 여러 가지 기법들도 적용하여 최종적으로 Resnet101 : 70.7%, Efficientnet b7 : 70.65%를 달성하였습니다. (해당 점수는 train set의 10%를 val set으로 사용하여 나타내었습니다.) <br>
 
 
