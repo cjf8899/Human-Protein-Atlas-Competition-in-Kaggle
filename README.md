@@ -37,9 +37,9 @@ image-level label 에서 cell-level label 까지 도출해야 하기 때문에 �
 
 **Label : 0**
   
-<p align="left"><img src="https://user-images.githubusercontent.com/53032349/118968985-83fcec80-b9a7-11eb-8628-7538adae861c.jpg" width="30%" height="30%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118969076-9ecf6100-b9a7-11eb-863d-1b363c47862c.jpg" width="30%" height="30%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118969210-c45c6a80-b9a7-11eb-9965-18c0811a44ba.jpg" width="30%" height="30%" title="70px" alt="memoryblock"></p><br>
+<p align="left"><img src="https://user-images.githubusercontent.com/53032349/118968985-83fcec80-b9a7-11eb-8628-7538adae861c.jpg" width="22%" height="22%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118969076-9ecf6100-b9a7-11eb-863d-1b363c47862c.jpg" width="22%" height="22%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118969210-c45c6a80-b9a7-11eb-9965-18c0811a44ba.jpg" width="22%" height="22%" title="70px" alt="memoryblock"></p><br>
   
- <p align="left"><img src="https://user-images.githubusercontent.com/53032349/118969262-d0482c80-b9a7-11eb-8daf-75a5b2f699cd.jpg" width="30%" height="30%" title="70px" alt="memoryblock"> label : 0　<img src="https://user-images.githubusercontent.com/53032349/118970184-e7d3e500-b9a8-11eb-9d5a-7be3f02eb51f.jpg" width="30%" height="30%" title="70px" alt="memoryblock"> label : 16 </p><br>
+ <p align="left"><img src="https://user-images.githubusercontent.com/53032349/118969262-d0482c80-b9a7-11eb-8daf-75a5b2f699cd.jpg" width="22%" height="22%" title="70px" alt="memoryblock"> **label : 0**　<img src="https://user-images.githubusercontent.com/53032349/118970184-e7d3e500-b9a8-11eb-9d5a-7be3f02eb51f.jpg" width="22%" height="22%" title="70px" alt="memoryblock"> **label : 16** </p><br>
   
 Cam은 Weakly supervised learning에서 자주 사용하는 기법이고, 본 대회측의 말에 의하면 한 이미지에 대한 multi-label이 존재하지만 이미지 안에 있는 여러 가지 cell에는 해당 라벨이 없을 수도 있다고 하였기 때문에 저는 각 label마다 cam을 찍어 각 라벨마다 어디를 보고 판단하는지 확인하는게 필요하다 생각하였습니다. (예시: image-label은 0,5,8이고 이미지 안에 a, b라는 cell이 존재할 때, cell-label이 각 각 a는 0,5,8, b는 8 일 수도 있다.)<br>
 
