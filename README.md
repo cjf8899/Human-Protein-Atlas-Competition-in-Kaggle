@@ -37,7 +37,7 @@ image-level label 에서 cell-level label 까지 도출해야 하기 때문에 �
 
 **Label : 0**
   
-<p align="left"><img src="https://user-images.githubusercontent.com/53032349/118968985-83fcec80-b9a7-11eb-8628-7538adae861c.jpg" width="22%" height="22%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118969076-9ecf6100-b9a7-11eb-863d-1b363c47862c.jpg" width="22%" height="22%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118969210-c45c6a80-b9a7-11eb-9965-18c0811a44ba.jpg" width="22%" height="22%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118969262-d0482c80-b9a7-11eb-8daf-75a5b2f699cd.jpg" width="22%" height="22%" title="70px" alt="memoryblock"></p><br>
+<p align="left"><img src="https://user-images.githubusercontent.com/53032349/118968985-83fcec80-b9a7-11eb-8628-7538adae861c.jpg" width="30%" height="30%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118969076-9ecf6100-b9a7-11eb-863d-1b363c47862c.jpg" width="30%" height="30%" title="70px" alt="memoryblock">　<img src="https://user-images.githubusercontent.com/53032349/118969210-c45c6a80-b9a7-11eb-9965-18c0811a44ba.jpg" width="30%" height="30%" title="70px" alt="memoryblock"></p><br>
   
  <p align="left"><img src="https://user-images.githubusercontent.com/53032349/118969262-d0482c80-b9a7-11eb-8daf-75a5b2f699cd.jpg" width="30%" height="30%" title="70px" alt="memoryblock"> label : 0　<img src="https://user-images.githubusercontent.com/53032349/118970184-e7d3e500-b9a8-11eb-9d5a-7be3f02eb51f.jpg" width="30%" height="30%" title="70px" alt="memoryblock"> label : 16 </p><br>
   
