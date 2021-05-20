@@ -42,13 +42,16 @@ image-level label 에서 cell-level label 까지 도출해야 하기 때문에 �
 Cam은 Weakly supervised learning에서 자주 사용하는 기법이고, 본 대회측의 말에 의하면 한 이미지에 대한 multi-label이 존재하지만 이미지 안에 있는 여러 가지 cell에는 해당 라벨이 없을 수도 있다고 하였기 때문에 저는 각 label마다 cam을 찍어 각 라벨마다 어디를 보고 판단하는지 확인하는게 필요하다 생각하였습니다. (예시: image-label은 0,5,8이고 이미지 안에 a, b라는 cell이 존재할 때, cell-label이 각 각 a는 0,5,8, b는 8 일 수도 있다.)<br>
 
 ## Segment by cell
+<img src="https://user-images.githubusercontent.com/53032349/118976732-4baddc00-b9b0-11eb-9206-54e78b8b6580.JPG" width="100%" height="100%" title="70px" alt="memoryblock"><br>
+<img src="https://user-images.githubusercontent.com/53032349/118976764-57010780-b9b0-11eb-969a-5197a097c45a.JPG" width="100%" height="100%" title="70px" alt="memoryblock"><br>
 이미지에 여러 가지 cell이 존재하기 때문에 이를 각각의 cell로 나눌 필요성을 느꼈고, 대회측에서도 무조건적으로 사용해야 하는 것이기 때문에 기본 cell segmentation tool을 제공해 주었습니다. 이 후에 submission에서 run time over가 나타났었고 이를 segmentation 하는 부분에서 시간을 많이 소모한다는 것을 발견했습니다. 저와 같은 이유로 제출이 안된다 하시는 분들을 검색해보았고 어떤 참가자의 fest cell segmentation tool 제공해주어 해결하였습니다.<br>
 
 ## Pseudo labeling
 이미지당 cell의 개수가 적게는 5개미만, 많게는 100개 이상이였습니다. 우리는 앞서 진행한 cam과 cell segmentation을 가지고 pseudo labeling을 진행하였습니다. cam에서 나온 heatmap을 가지고 일정 수치 이상인 값들로 labeling, 그 외의 값을 가지는 cell은 새로운 class를 만들어 따로 저장하였습니다. 총 cell의 개수는 490,000개 정도였고 이중 labeling이 진행된 cell은 60,000개 정도였습니다. 총 cell의 개수에 비해 사용하는 cell이 너무 적다고 판단하여 나중에는 위에 있는 사이클을 한번 더 적용하여 80,000개 정도 까지 늘렸습니다. <br>
-<img src="https://user-images.githubusercontent.com/53032349/118949736-80139f00-b994-11eb-8667-0737477fbea9.JPG" width="100%" height="100%" title="70px" alt="memoryblock"><br>
+
   
 ## Single-label classification
+<img src="https://user-images.githubusercontent.com/53032349/118949736-80139f00-b994-11eb-8667-0737477fbea9.JPG" width="100%" height="100%" title="70px" alt="memoryblock"><br>
 위에서 설명한 접근방식을 토대로 하여 최종적으로 cell-lavel pseudo label이 있는 데이터 셋을 완성하였고, 이를 Single-label classification 하였습니다. pre-train으로는 imagenet을 사용하려 했지만 테스크가 너무 다른 테스크였기 때문에 앞서 진행한 multi-label classification에서의 70.*%모델들을 사용하였습니다. 처음 사이클 한번 돌았을 때 성능은 **30 ~ 35%** 이였고, 위 사이클을 한 번 더 돌았을 때 최종적으로 **41.14%** 달성하였고 대회를 마쳤습니다.<br>
 
 # Review
