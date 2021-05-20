@@ -41,3 +41,12 @@ Weakly supervised learning에서 자주 사용하고, 본 대회측의 말에 �
 
 ## Pseudo labeling
 이미지당 cell의 개수가 적게는 5개미만, 많게는 100개 이상이였습니다. 우리는 앞서 진행한 cam과 cell segmentation을 가지고 pseudo labeling을 진행하였습니다. cam에서 나온 heatmap을 가지고 일정 수치 이상인 값들로 labeling, 그 외의 값을 가지는 cell은 새로운 class를 만들어 따로 저장하였습니다. 총 cell의 개수는 490,000개 정도였고 이중 labeling이 진행된 cell은 60,000개 정도였습니다. 총 cell의 개수에 비해 사용하는 cell이 너무 적다고 판단하여 나중에는 위에 있는 사이클을 한번 더 적용하여 80,000개 정도 까지 늘렸습니다. <br>
+<img src="https://user-images.githubusercontent.com/53032349/118949736-80139f00-b994-11eb-8667-0737477fbea9.JPG" width="80%" height="80%" title="70px" alt="memoryblock"><br>
+  
+## Single-label classification
+위에서 설명한 접근방식을 토대로 하여 최종적으로 cell-lavel pseudo label이 있는 데이터 셋을 완성하였고, 이를 Single-label classification 하였습니다. pre-train으로는 imagenet을 사용하려 했지만 테스크가 너무 다른 테스크였기 때문에 앞서 진행한 multi-label classification에서의 70.*%모델들을 사용하였습니다. 처음 사이클 한번 돌았을 때 성능은 30 ~ 35% 이였고, 위 사이클을 한 번 더 돌았을 때 최종적으로 41.14% 달성하였고 대회를 마쳤습니다.<br>
+
+# Review
+Kaggle이라는 곳에서 첫 번째로 진행하였던 대회였습니다. 처음이다보니 대회의 진행 순서, 방법, submission 하는 방법 등등 많은 고난과 역경이 있었습니다.(특히 submission...)<br>
+그럼에도 불구하고, 옆에서 같이 도와주시던 연구원님, 랩실 형, 동기와 같이 이런 대회를 참가해 볼 수 있어서 좋은 기회였다고 생각합니다. 점수로는 도와주신것에 비해 못 나왔지만 최종적으로 41.14%를 달성하여 top 9%에서 마무리 하여 처음 대회 치고 괜찮다!! 위로하며 다음 대회에서는 좀더 좋은 성적을 거두기를 노력할겁니다! 감사합니다!!<br>
+  
